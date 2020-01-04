@@ -1,0 +1,161 @@
+@import ../../AllStyle
+
+
+.header
+    width: 100%
+    height: 80px
+    display: flex
+    justify-content: space-between
+    // background: #ffffff40
+
+.logoContain
+    width: 20%
+    display: flex
+    justify-content: flex-start
+    align-items: center 
+    padding: 20px
+
+.logoLink
+    font-family: $font-stack-Pacifico
+    color: $color-white-text
+    font-size: 35px
+    text-decoration: none
+
+.burgerMenu
+    display: none
+
+.arrayLink
+    display: flex
+    justify-content: flex-end
+
+    .linkContain
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center 
+        padding: 0 30px
+        transition: all 0.3s
+
+        &:hover .linkitem
+                color: $color-orange-text
+                transform: scale(1.2)
+        &:hover .burgerBlock
+            display: flex
+
+        .linkitem 
+            position: relative
+            color: $color-white-text
+            font-size: 30px
+            font-family: $font-stack-Pacifico
+            text-decoration: none
+            transition: all 0.3s
+        
+           
+        .linkitem-active
+            color: $color-orange-text
+            font-size: 35px
+        
+        .burgerBlock
+            display: none
+            position: absolute
+            top: 8.2vh
+            z-index: 10
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.6)
+            background: #fff
+
+            .burgerContain
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: flex-start
+                padding: 20px 30px
+
+                .titleBurgerList
+                    font-family: $font-stack-Garamond
+                    font-size: 16px
+                    padding-bottom: 10px
+                    cursor: pointer
+
+                .burgerListItems
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: flex-start
+
+                    .itemBurgerList
+                        font-family: $font-stack-Garamond
+                        font-size: 14px
+                        color: #686868
+                        padding: 5px 0
+                        cursor: pointer
+                        transition: all 0,3s
+
+                        &:hover
+                            color: #000
+
+@media screen and ( max-width: 1300px)
+    .arrayLink
+        display: none
+
+    .burgerMenu
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-right: 20px
+
+        .burgerIcon
+            width: 35px
+            height: 35px
+            background: url(./burger.svg) no-repeat
+            background-size: 100% 100%
+
+    .burgerMenuBlock
+        position: fixed
+        z-index: 100
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        background: $color-main-dark
+        display: flex
+        flex-direction: column   
+
+        .burgerMenuHeader
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0px 20px
+            background: #fff
+
+            h3
+                font-size: 20px
+                font-family: $font-stack-Pacifico
+            
+            span
+                width: 25px
+                height: 25px
+                background: url(./restaurant.svg) no-repeat
+                background-size: 100% 100%
+
+        .burgerMenuContant
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            height: 80%
+
+            .burgerMenuLinkList
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .linkContain
+                    .linkitem
+                        font-size: 35px
+                        font-family: $font-stack-Pacifico
+                        color: $color-white-text
+                        text-decoration: none
+
+                    .linkitem-active
+                        color: $color-orange-text
+                        font-size: 35px
