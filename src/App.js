@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './AppStyle.sass';
 import { connect } from 'react-redux';
 
 class AppClass extends React.Component{
