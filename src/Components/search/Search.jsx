@@ -4,6 +4,7 @@ import './searchStyle.sass';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SearchEl from './SearchEl';
+import data from '../../date/restaurants.js'
 
 class SearchClass extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class SearchClass extends React.Component {
 
   render() {
 
+
+
     return (
       <>
         <div key="searchPage" className="searchBackground">
@@ -25,7 +28,7 @@ class SearchClass extends React.Component {
 
           </div>
           <div className="renderBlock">
-            {this.state.array.map((el,index)=>
+            { data.map((el,index)=>
             <SearchEl el={el} />
             )}
           </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Home from './Components/home/Home';
 import Help from './Components/help/Help';
 import Contacts from './Components/contacts/Contacts';
@@ -28,7 +27,7 @@ ReactDOM.render(
                 <Route path='/home' component={Home} />
                 <Route path='/help' component={Help} />
                 <Route path='/contacts' component={Contacts} />
-                {/* <Route path='/search' component={Search} /> */}
+                <Route path='/search' component={Search} />
                 <Route exact path="/">
                     <Redirect to="/home" /> 
                 </Route>

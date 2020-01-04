@@ -3,6 +3,8 @@ import './searchElStyle.sass';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
+
 class SearchElClass extends React.Component {
   constructor(props) {
     super(props);
@@ -16,24 +18,28 @@ class SearchElClass extends React.Component {
     return (
       <div className="searchCard">
         <div className="topCard">
-          <img src="https://koko.by/wp-content/uploads/2019/11/IMG_6290-267x200.jpg" alt="" />
+          <img src={this.props.el.img} alt="" />
           <div className="circleBlock">
-            <i className="circle" />
+            
+            <div className="circle" ><span>{this.props.el.bill}</span></div>
+            {this.props.el.deliver &&
             <i className="circleSmall" />
+            }
+            {this.props.el.chiliPepper &&
             <i className="circleSmall2" />
+            }
+            {this.props.el.leaf &&
             <i className="circleSmall3" />
+            } 
           </div>
         </div>
 
-
         <div className="bottomCard">
-          <span>Название</span>
-          <span>Адрес,время работы</span>
-          <p>Описание</p>
-          <span>Средний счёт</span>
-          <span>Доставка</span>
-          <span>Летняя терасса</span>
-          <span>Wi-fi</span>
+          <span className="name">{this.props.el.name}</span>
+          <span className="time">Время работы: {this.props.el.timeWork}</span>
+          <span className="time">Тип кухни: {this.props.el.cuisine.map((el,index)=>el+"; ")}</span>
+          <span className="address">{this.props.el.address}</span>
+          <p className="description">{this.props.el.description}</p>
         </div>
       </div>
     );

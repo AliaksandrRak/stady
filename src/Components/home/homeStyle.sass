@@ -17,10 +17,21 @@
     align-items: center
     
     .helloWord
-        font-family: $font-stack-Lobster
+        font-family: $font-stack-Garamond
+        font-weight: 500
+        font-style: normal
         color: $color-orange-text
-        padding: 10vh 0
-        font-size: 80px 
+        padding: 5vh 0
+        font-size: 110px 
+        margin: 0
+    
+    .descriptionText
+        width: 750px
+        text-align: center
+        color: #fff
+        font-family: $font-stack-Garamond
+        font-weight: 400
+        font-size: 35px
         margin: 0
     
     .serch
@@ -44,7 +55,7 @@
 
 .homeContainer
     width: 100%
-    min-height: 80vh
+    min-height: 70vh
     height: max-content
     background: #fff
     display: flex
@@ -62,16 +73,31 @@
         color: $color-text
         font-family: $font-stack-Garamond
         font-size: 22px
-        width: 80%
+        width: 50%
+
+@media screen and ( max-width: 1300px )
+    .startWindow
+        .helloWord
+            padding: 3vh 0
+            font-size: 85px     
+        .descriptionText
+            font-size: 35px
+
+    .homeContainer
+        .description
+             width: 80%
 
 @media screen and ( max-width: 800px)
     .homeBackground
-        background-position: left -120px top 
+        background-position: left -60px top 
 
     .startWindow
         .helloWord
-            padding: 10vh 0
+            padding: 3vh 0
             font-size: 55px     
+        .descriptionText
+            width: 550px
+            font-size: 25px
 
 
 @media screen and ( max-width: 530px)
@@ -80,5 +106,14 @@
 
     .startWindow
         .helloWord
-            padding: 10vh 0
+            padding: 3vh 0
             font-size: 35px 
+
+        .descriptionText
+            width: 320px
+            font-size: 22px
+
+    .homeContainer
+        .description
+             width: 90%
+             padding-bottom: 35%

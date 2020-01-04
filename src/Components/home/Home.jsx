@@ -19,6 +19,7 @@ class HomeClass extends React.Component{
             <Header />
             <div className="startWindow">
                 <h2 className="helloWord">Найди свой вкус</h2>
+                <p className="descriptionText">Исследуйте новые гастрономические нотки, которые позволят окунуться в мир высокой кухни.</p>
                 {/* <div className="serch">
                     <div className="button">
                     <Link to="/search" className="text">Поиск</Link>
@@ -27,11 +28,10 @@ class HomeClass extends React.Component{
             </div>
             <div id="aboutUs"  className="homeContainer">
                 <h3 className="title">О нас</h3>
-                <p className="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, nesciunt. Omnis est accusamus perferendis aspernatur, ipsa corporis. Ipsam debitis officiis perspiciatis voluptatum tempore consectetur neque, dolorum illo dolorem et suscipit?
-                Molestias laborum expedita facere amet temporibus nam laudantium sequi quas ullam qui perferendis harum fugit nemo quidem provident omnis, natus totam iusto earum assumenda necessitatibus porro vitae voluptatibus dolorum? Quas?
-                Obcaecati laudantium nobis esse dicta culpa rem sed id dignissimos eaque, atque, quae commodi pariatur! Non maxime tenetur dignissimos, distinctio incidunt animi, fugit repellat quasi sed porro aliquid explicabo dolorum.
-                Architecto quasi libero doloribus ipsa vel velit nam molestias adipisci quisquam ab rem quod accusantium perspiciatis optio omnis eligendi, vero recusandae quibusdam voluptates dolorem eveniet voluptatum, atque soluta deleniti! Nihil.
-                A voluptatibus, et laudantium voluptates ad porro vitae repellendus eos, unde at nam hic quas aspernatur doloribus voluptatum veniam. Beatae quisquam veniam odit expedita ducimus necessitatibus sed aperiam, temporibus fugit.</p>
+                <p className="description">Дорогие Господа!
+Мы, коллектив сервиса "RESTAURANTS", предлагаем вам воплотить все ваши самые изысканные кулинарные желания в жизнь, посредством поиска и выбора самых топовых ресторанов Минска. 
+На ваше усмотрение будут представлены рестораны, испытанные самыми избалованными гостями, пережившие самые  тщательные проверки и отвоевавшие тем самым звания лучших заведений города с высокой кухней.
+Удачного поиска и приятного аппетита!</p>
             </div>
         </div>
     );

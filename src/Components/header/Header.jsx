@@ -45,7 +45,7 @@ class HeaderClass extends React.Component {
                     ]
                 },
                 {
-                    name: "Поиск", link: "/home", massLink: [
+                    name: "Поиск", link: "/search", massLink: [
                         {
                             title: "Trans-European Tours",
                             items: [
