@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.62c9075e.chunk.css",
+    "main.js": "/static/js/main.f48b0d4a.chunk.js",
+    "main.js.map": "/static/js/main.f48b0d4a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.28430c79.js",
+    "runtime-main.js.map": "/static/js/runtime-main.28430c79.js.map",
+    "static/js/2.4a568f38.chunk.js": "/static/js/2.4a568f38.chunk.js",
+    "static/js/2.4a568f38.chunk.js.map": "/static/js/2.4a568f38.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.94fb2ce8a9b73abb827190025c5765e9.js": "/precache-manifest.94fb2ce8a9b73abb827190025c5765e9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.62c9075e.chunk.css.map": "/static/css/main.62c9075e.chunk.css.map",
+    "static/js/2.4a568f38.chunk.js.LICENSE": "/static/js/2.4a568f38.chunk.js.LICENSE",
+    "static/media/headerStyle.sass": "/static/media/restaurant.534327f9.svg",
+    "static/media/searchStyle.sass": "/static/media/eggs-1577626821823-1090.06a261f3.jpg",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28430c79.js",
+    "static/js/2.4a568f38.chunk.js",
+    "static/css/main.62c9075e.chunk.css",
+    "static/js/main.f48b0d4a.chunk.js"
+  ]
+}
