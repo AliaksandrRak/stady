@@ -104,7 +104,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Морская(Дары моря)","Фьюжн"],
+        "cuisine":["Морская (Дары моря)","Фьюжн"],
         "img": img6,
         "bill": "$$$"
     },
@@ -118,7 +118,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Морская(Дары моря)","Фьюжн"],
+        "cuisine":["Морская (Дары моря)","Фьюжн"],
         "img": img7,
         "bill": "$$"
     },
@@ -160,7 +160,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейская","Морская(Дары моря)"],
+        "cuisine":["Европейская","Морская (Дары моря)"],
         "img": img10,
         "bill": "$$"
     },
@@ -216,7 +216,7 @@ const data = [
         "leaf": false,
         "wiFi":false,
         "parking":false,
-        "cuisine":["Европейская","Морская(Дары моря)"],
+        "cuisine":["Европейская","Морская (Дары моря)"],
         "img": img14,
         "bill": "$$"
     },
@@ -230,7 +230,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейская","Морская(Дары моря)","Фьюжн","Белорусская"],
+        "cuisine":["Европейская","Морская (Дары моря)","Фьюжн","Белорусская"],
         "img": img15,
         "bill": "$$$$"
     },
@@ -286,7 +286,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейская","Морская(Дары моря)","Фьюжн",],
+        "cuisine":["Европейская","Морская (Дары моря)","Фьюжн",],
         "img": img19,
         "bill": "$$$$"
     },
@@ -328,7 +328,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейская","Морская(Дары моря)","Фьюжн","Белорусская"],
+        "cuisine":["Европейская","Морская (Дары моря)","Фьюжн","Белорусская"],
         "img": img22,
         "bill": "$$$$"
     },
@@ -356,7 +356,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейская","Морская(Дары моря)","Фьюжн"],
+        "cuisine":["Европейская","Морская (Дары моря)","Фьюжн"],
         "img": img24,
         "bill": "$$$"
     }

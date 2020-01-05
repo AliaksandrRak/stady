@@ -153,6 +153,18 @@
         display: flex
         flex-wrap: wrap
 
+        .buttonClear
+            padding: 5px 10px
+            cursor: pointer
+            background: $color-main
+            color: $color-white-text
+            font-family: $font-stack-Pacifico
+            font-size: 22px
+            transition: all 0.3s
+
+            &:hover
+               color: $color-orange-text
+
 @media screen and ( max-width: 1300px )
     .searchContainer
         .renderBlock
@@ -177,7 +189,6 @@
             left: 10px
 
             span
-                background: 
                 color: $color-text
                 font-family: $font-stack-Garamond
                 font-size: 22px

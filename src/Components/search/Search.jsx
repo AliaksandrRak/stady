@@ -221,6 +221,12 @@ class SearchClass extends React.Component {
             {arrayCards.map((el, index) =>
               <SearchEl key={index} el={el} />
             )}
+            {arrayCards.length === 0 &&
+              <div>
+                  <h2>По вашим параметрам нет результатов!</h2>
+                  <span className="buttonClear" onClick={()=>{this.clearFilter()}}>Попробовать ещё раз!</span>
+              </div>
+            }
           </div>
         </div>
 
