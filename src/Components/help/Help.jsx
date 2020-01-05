@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header/Header'
 import './helpStyle.sass';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 
 class HelpClass extends React.Component{
   constructor(props){

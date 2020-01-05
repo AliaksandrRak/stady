@@ -172,11 +172,11 @@ class HeaderClass extends React.Component {
                                             <Link to={el.link} onClick={() => { this.setState({ activeLink: el.link }) }} className={this.state.activeLink === el.link ? "linkitem linkitem-active" : "linkitem"}>{el.name}</Link>
                                             <div className="burgerBlock">
                                                 {el.massLink.map((element, index) =>
-                                                    <div className="burgerContain">
+                                                    <div key={element.title} className="burgerContain">
                                                         <span className="titleBurgerList">{element.title}</span>
                                                         <div className="burgerListItems">
                                                             {element.items.map((el, ind) =>
-                                                                <span className="itemBurgerList">{el}</span>
+                                                                <span key={el}  className="itemBurgerList">{el}</span>
                                                             )}
                                                         </div>
 

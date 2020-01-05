@@ -34,7 +34,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска"],
+        "cuisine":["Европейская"],
         "img": img1,
         "bill": "$$$"
     },
@@ -48,7 +48,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска"],
+        "cuisine":["Европейская"],
         "img": img2,
         "bill": "$$"
     },
@@ -62,7 +62,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска","Фьюжн"],
+        "cuisine":["Европейская","Фьюжн"],
         "img": img3,
         "bill": "$$$"
     },
@@ -76,7 +76,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейска","Белорусская"],
+        "cuisine":["Европейская","Белорусская"],
         "img": img4,
         "bill": "$$$$"
     },
@@ -90,7 +90,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейска","Фьюжн"],
+        "cuisine":["Европейская","Фьюжн"],
         "img": img5,
         "bill": "$$"
     },
@@ -132,7 +132,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска"],
+        "cuisine":["Европейская"],
         "img": img8,
         "bill": "$$"
     },
@@ -146,7 +146,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":true,
-        "cuisine":["Европейска","Белорусская"],
+        "cuisine":["Европейская","Белорусская"],
         "img": img9,
         "bill": "$$$"
     },
@@ -160,7 +160,7 @@ const data = [
         "leaf": false,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска","Морская(Дары моря)"],
+        "cuisine":["Европейская","Морская(Дары моря)"],
         "img": img10,
         "bill": "$$"
     },
@@ -174,7 +174,7 @@ const data = [
         "leaf": true,
         "wiFi":true,
         "parking":false,
-        "cuisine":["Европейска","Фьюжн"],
+        "cuisine":["Европейская","Фьюжн"],
         "img": img11,
         "bill": "$$"
     },

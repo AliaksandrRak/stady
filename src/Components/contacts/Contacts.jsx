@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header/Header'
 import './contactsStyle.sass';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 
 class ContactsClass extends React.Component{
   constructor(props){

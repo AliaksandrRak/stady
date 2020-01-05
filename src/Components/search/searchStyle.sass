@@ -12,12 +12,13 @@
     
 
 .searchContainer
+    position: relative
     width: 100%
     min-height: 71.8vh
     height: max-content
     background: #fff
     display: flex
-    padding-top: 5%
+    padding-top: 50px
 
 
     .title
@@ -36,11 +37,113 @@
         top: 50px
         width: 20%
         min-height: 15%
-        max-height: 500px
+        max-height: 360px
+        min-width: 270px
+        max-width: 360px
         // background: $color-main
-        border-right: 1px solid #387898
+        border-right: 1px solid $color-text
         margin-right: 2%
         margin-left: 1%
+
+    .filterContent
+        .container
+            padding: 5px 10px
+            padding-left: 5px
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .block
+                width: 45%
+                color: $color-text
+                font-family: $font-stack-Garamond
+                font-size: 18px
+
+        .containerColumn
+            padding-top: 30px
+            display: flex
+            flex-direction: column
+            color: $color-text
+            font-family: $font-stack-Garamond
+            font-size: 18px
+
+            span
+                display: flex
+                padding: 5px 0
+
+            .deliver
+                display: block
+                padding-right: 5px
+                width: 25px
+                height: 25px
+                background: url(./shopping-bag.svg) no-repeat
+                background-size: 100% 100%
+            
+            .leaf
+                display: block
+                padding-right: 5px
+                width: 25px
+                height: 25px
+                background: url(./leaf.svg) no-repeat
+                background-size: 100% 100%
+            
+            .chiliPepper
+                display: block
+                padding-right: 5px
+                width: 25px
+                height: 25px
+                background: url(./chili-pepper.svg) no-repeat
+                background-size: 100% 100%
+
+    .mobailFilterBlock
+        display: none
+
+    .popupMobailFilter
+        display: none
+        justify-content: center
+        align-items: center
+        position: fixed
+        top: 0
+        left: 0
+        background: #fff
+        z-index: 11
+        width: 100vw
+        height: 100vh
+
+        .contentblock
+            width: 50%
+
+            .closePopup
+                display: block
+                position: absolute
+                top: 5%
+                right: 5%
+                width: 25px
+                height: 25px
+                background: url(./restaurantBlack.svg) no-repeat
+                background-size: 100% 100%
+            
+            .clearPopup
+                display: block
+                position: absolute
+                top: 5%
+                left: 5%
+                width: 35px
+                height: 35px
+                background: url(./dishwasher.svg) no-repeat
+                background-size: 100% 100%
+            .applyBlock
+                display: flex
+                justify-content: center
+                align-items: flex-end
+                height: 80px
+
+                .applyPopup
+                    padding: 5px 25px
+                    color: #fff
+                    background: $color-main
+                    font-family: $font-stack-Garamond
+                    font-size: 18px
 
     .renderBlock
         width: 80%
@@ -49,3 +152,38 @@
         padding-bottom: 5%
         display: flex
         flex-wrap: wrap
+
+@media screen and ( max-width: 1300px )
+    .searchContainer
+        .renderBlock
+            margin-right: 1% 
+        
+
+@media screen and ( max-width: 980px )
+    .searchContainer
+        .filterBlock
+            display: none
+        
+        .renderBlock
+            width: 100%
+            justify-content: center
+        
+        .mobailFilterBlock
+            display: flex
+            position: absolute
+            cursor: pointer
+            z-index: 10
+            top: 15px
+            left: 10px
+
+            span
+                background: 
+                color: $color-text
+                font-family: $font-stack-Garamond
+                font-size: 22px
+
+@media screen and ( max-width: 520px )
+    .searchContainer
+        .popupMobailFilter
+            .contentblock
+                width: 90%
