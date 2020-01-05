@@ -14,38 +14,38 @@ class SearchClass extends React.Component {
       openFilter: false,
       cuisine: [],
       bill: "",
-      features: "",
+      features: [],
       deliver: false,
       timeWork: "",
-      cuisinesMass:[],
-      timeWorkMass:[],
-      billMass:[],
-      featuresMass:["Острые блюда","Веганское меню","Парковка","Wi-fi"],
+      cuisinesMass: [],
+      timeWorkMass: [],
+      billMass: [],
+      featuresMass: ["Острые блюда", "Веганское меню", "Парковка", "Wi-fi"],
     }
   }
 
-  componentWillMount(){
-    let cuisinesMass = [],timeWorkMass = [],billMass = [];
-    for(let i=0; i<data.length;i++){
-        for(let j=0; j<data[i].cuisine.length;j++){
-          if(cuisinesMass.indexOf(data[i].cuisine[j]) === -1){
-            cuisinesMass.push(data[i].cuisine[j])
-          }
+  componentWillMount() {
+    let cuisinesMass = [], timeWorkMass = [], billMass = [];
+    for (let i = 0; i < data.length; i++) {
+      for (let j = 0; j < data[i].cuisine.length; j++) {
+        if (cuisinesMass.indexOf(data[i].cuisine[j]) === -1) {
+          cuisinesMass.push(data[i].cuisine[j])
         }
-        if(timeWorkMass.indexOf(data[i].timeWork) === -1){
-          timeWorkMass.push(data[i].timeWork)
-        }
-        if(billMass.indexOf(data[i].bill) === -1){
-          billMass.push(data[i].bill)
-        }
+      }
+      if (timeWorkMass.indexOf(data[i].timeWork) === -1) {
+        timeWorkMass.push(data[i].timeWork)
+      }
+      if (billMass.indexOf(data[i].bill) === -1) {
+        billMass.push(data[i].bill)
+      }
     }
     cuisinesMass = cuisinesMass.sort()
     timeWorkMass = timeWorkMass.sort()
     billMass = billMass.sort()
     this.setState({
-      cuisinesMass:cuisinesMass,
-      timeWorkMass:timeWorkMass,
-      billMass:billMass
+      cuisinesMass: cuisinesMass,
+      timeWorkMass: timeWorkMass,
+      billMass: billMass
     })
   }
 
@@ -65,110 +65,122 @@ class SearchClass extends React.Component {
     this.setState({ features: event.target.value })
   }
 
-  handleChangeDeliver= (event) => {
+  handleChangeDeliver = (event) => {
     this.setState({ deliver: event.target.checked })
   }
 
-  clearFilter=()=>{
+  clearFilter = () => {
     this.setState({
       cuisine: [],
       bill: "",
-      features: "",
+      features: [],
       deliver: false,
       timeWork: "",
     })
   }
 
-  filterCards=(array)=>{
-    let newArray=[];
-    for(let i = 0; i<array.length;i++){
-      
+  filterCards = (array) => {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+
       // проверка на кухню
       let flagСuisine = false;
-      if(this.state.cuisine.length === 0){
+      if (this.state.cuisine.length === 0) {
         flagСuisine = true
-      }else{
-        for(let j=0; j<this.state.cuisine.length;j++){
-          if(array[i].cuisine.indexOf(this.state.cuisine[j]) > -1){
+      } else {
+        for (let j = 0; j < this.state.cuisine.length; j++) {
+          if (array[i].cuisine.indexOf(this.state.cuisine[j]) > -1) {
             flagСuisine = true
             break;
           }
         }
-        if(!flagСuisine){
+        if (!flagСuisine) {
           continue;
         }
       }
-      
+
       //проверка на среднюю стоимость
       let flagBill = false;
-      if(this.state.bill !==""){
-        if(array[i].bill === this.state.bill){
-          flagBill=true
+      if (this.state.bill !== "") {
+        if (array[i].bill === this.state.bill) {
+          flagBill = true
         }
-        if(!flagBill){
+        if (!flagBill) {
           continue;
         }
       }
 
       //проверка на время работы
       let flagTimeWork = false;
-      if(this.state.timeWork !==""){
-        if(array[i].timeWork === this.state.timeWork){
-          flagTimeWork=true
+      if (this.state.timeWork !== "") {
+        if (array[i].timeWork === this.state.timeWork) {
+          flagTimeWork = true
         }
-        if(!flagTimeWork){
+        if (!flagTimeWork) {
           continue;
         }
       }
 
       //проверка на Доставку
       let flagDeliver = false;
-      if(this.state.deliver){
-        if(array[i].deliver === this.state.deliver){
-          flagDeliver=true
+      if (this.state.deliver) {
+        if (array[i].deliver === this.state.deliver) {
+          flagDeliver = true
         }
-        if(!flagDeliver){
+        if (!flagDeliver) {
           continue;
         }
       }
 
       //проверка на Особенности
       let flagFeatures = false;
-      if(this.state.features !== ""){
-        switch(this.state.features){
-            case "Острые блюда" :
-              if(array[i].chiliPepper){
-                flagFeatures=true
-              }
-              break;
-            case "Веганское меню" :
-              if(array[i].leaf){
-                flagFeatures=true
-              }
-                break;
-            case "Парковка" :
-              if(array[i].parking){
-                flagFeatures=true
-              }
-              break;
-            case "Wi-fi" :
-              if(array[i].wiFi){
-                flagFeatures=true
-              }
-                break;
+      if (this.state.features.length > 0) {
+
+        for (let k = 0; k < this.state.features.length; k++) {
+          if (this.state.features[k] === "Острые блюда") {
+            if (array[i].chiliPepper) {
+              flagFeatures = true
+            } else {
+              flagFeatures = false
+              break
+            }
+          }
+          if (this.state.features[k] === "Веганское меню") {
+            if (array[i].leaf) {
+              flagFeatures = true
+            } else {
+              flagFeatures = false
+              break
+            }
+          }
+          if (this.state.features[k] === "Парковка") {
+            if (array[i].parking) {
+              flagFeatures = true
+            } else {
+              flagFeatures = false
+              break
+            }
+          }
+          if (this.state.features[k] === "Wi-fi") {
+            if (array[i].wiFi) {
+              flagFeatures = true
+            } else {
+              flagFeatures = false
+              break
+            }
+          }
         }
-        
-        if(!flagFeatures){
+        if (!flagFeatures) {
           continue;
         }
       }
-      
+
       newArray.push(array[i])
-      
+
     }
 
-    console.log(array.length,"длинна массива array")
-    console.log(newArray.length,"длинна массива newArray")
+    console.log(array.length, "длинна массива array")
+    console.log(newArray.length, "длинна массива newArray")
     return newArray
   }
 
@@ -177,9 +189,9 @@ class SearchClass extends React.Component {
 
 
     let arrayCards = []
-    
+
     arrayCards = this.filterCards(data)
-  
+
     return (
       <>
         <div key="searchPage" className="searchBackground">
@@ -201,7 +213,7 @@ class SearchClass extends React.Component {
               <div className="applyBlock">
                 <span className="applyPopup" onClick={() => { this.setState({ openFilter: !this.state.openFilter }) }}>Применить</span>
               </div>
-              
+
             </div>
 
           </div>

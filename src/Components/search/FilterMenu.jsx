@@ -10,7 +10,7 @@ export default function FilterMenu(props) {
   return (
     <div className="filterContent">
       <div className="container">
-        <MultipleSelect lableName={"Кухня:"} cuisine={props.that.state.cuisine} massEl={props.cuisinesMass} handleChange={props.that.handleChangeCuisine} />
+        <MultipleSelect lableName={"Кухня:"} valueEl={props.that.state.cuisine} massEl={props.cuisinesMass} handleChange={props.that.handleChangeCuisine} />
       </div>
       <div className="container">
         <div className="block">
@@ -22,7 +22,7 @@ export default function FilterMenu(props) {
       </div>
       <div className="container">
         <div className="block">
-          <Selector lableName={"Особенности:"} valueEl={props.that.state.features}  massEl={props.featuresMass} handleChange={props.that.handleChangeFeatures} />
+          <MultipleSelect lableName={"Особенности:"} valueEl={props.that.state.features}  massEl={props.featuresMass} handleChange={props.that.handleChangeFeatures} />
         </div>
         <div className="block">
           Доставка:

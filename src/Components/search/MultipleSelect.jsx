@@ -18,14 +18,14 @@ export default function MultipleSelect(props){
         labelId="demo-mutiple-checkbox-label"
         id="demo-mutiple-checkbox"
         multiple
-        value={props.cuisine}
+        value={props.valueEl}
         onChange={props.handleChange}
         input={<Input />}
         renderValue={selected => selected.join(', ')}
       >
         {props.massEl.map(name => (
           <MenuItem key={name} value={name}>
-            <Checkbox color="primary" checked={props.cuisine.indexOf(name) > -1} />
+            <Checkbox color="primary" checked={props.valueEl.indexOf(name) > -1} />
             <ListItemText primary={name} />
           </MenuItem>
         ))}
